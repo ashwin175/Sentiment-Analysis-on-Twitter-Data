@@ -1,0 +1,57 @@
+import pandas as pd
+
+# Sample dataset
+data = {
+    "text": [
+        "I love this product! It works perfectly.",
+        "Worst experience ever, totally disappointed.",
+        "The service was okay, nothing special.",
+        "Amazing performance! Highly recommended.",
+        "I hate how slow this app is.",
+        "Not bad, but could be better.",
+        "Great value for the price!",
+        "This is terrible. I want a refund.",
+        "The update is decent, I like it.",
+        "Absolutely fantastic! Would buy again.",
+        "I'm not sure how I feel about this.",
+        "The product quality is very poor.",
+        "Customer service was very helpful!",
+        "This made my day, great job!",
+        "It doesn't work as expected.",
+        "Pretty good overall.",
+        "Neutral experience, nothing wrong.",
+        "I’m extremely satisfied with the results.",
+        "This is the worst purchase I’ve ever made.",
+        "Such an amazing improvement with the new update!"
+    ],
+    "sentiment": [
+        "positive",
+        "negative",
+        "neutral",
+        "positive",
+        "negative",
+        "neutral",
+        "positive",
+        "negative",
+        "positive",
+        "positive",
+        "neutral",
+        "negative",
+        "positive",
+        "positive",
+        "negative",
+        "positive",
+        "neutral",
+        "positive",
+        "negative",
+        "positive"
+    ]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Save as CSV
+df.to_csv("tweets.csv", index=False)
+
+print("tweets.csv created successfully!")
